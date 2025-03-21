@@ -1,0 +1,281 @@
+{
+  "site": {
+    "name": "Allis Trafikskola",
+    "tagline": "Sveriges bästa körskola"
+  },
+  "nav": {
+    "home": "Hem",
+    "about": "Om Ali",
+    "courses": "Kurser",
+    "resources": "Resurser",
+    "trafficquiz": "Trafikquiz",
+    "practiceRoutes": "ÖvningsRutter",
+    "successStories": "FramGårShistorier",
+    "blog": "Blogg",
+    "reviews": "Recensioner",
+    "contact": "Kontakt",
+    "bookLesson": "Boka lektion"
+  },
+  "header": {
+    "phone": "Ring oss",
+    "email": "E-post"
+  },
+  "hero": {
+    "title": "Lär dig köra med Sveriges bästa körlärare",
+    "subtitle": "Hos Allis Trafikskola får du personlig handledning av Ali – Sveriges mest efterfrågade körlärare med över 15 års erfarenhet och 92% godkända på första försöket.",
+    "cta": {
+      "book": "Boka Introduktionslektion",
+      "about": "Läs Mer Om Ali"
+    },
+    "stats": "875+ femstjärniga recensioner",
+    "instructorImageAlt": "Ali - Professionell körlärare"
+  },
+  "about": {
+    "meetAli": "Möt Ali – Din personliga körlärare",
+    "title": "Om Ali – Erfaren körlärare i Malmö",
+    "subtitle": "Lär känna Sveriges mest erfarna och efterfrågade körlärare med 15 års erfarenhet och över 1200 nöjda elever",
+    "description": "Med över 15 års erfarenhet som körlärare har Ali hjälpt mer än 1200 elever att bli säkra och skickliga förare. Alis pedagogiska förmåga och personliga engagemang har gjort honom till en av Sveriges mest eftertraktade körlärare.",
+    "certified": "Certifierad trafiklärare",
+    "certifiedDesc": "med behörighet att undervisa för B-körkort.",
+    "specialized": "Specialiserad på nervösa förare",
+    "specializedDesc": "och personer med körångest.",
+    "multilingual": "Flerspråkig",
+    "multilingualDesc": "- undervisar på svenska, engelska och arabiska.",
+    "personal": "Personlig approach",
+    "personalDesc": "med fokus på dina individuella behov och inlärningsstil.",
+    "conclusion": "Hos Allis Trafikskola är du inte bara en elev – du är en del av familjen. Ali följer dig genom hela processen med målet att göra dig till en säker, självsäker och kompetent förare för livet.",
+    "readMore": "Läs mer om Ali",
+    "teachingImageAlt": "Ali undervisar"
+  },
+  "courses": {
+    "title": "Våra kurser",
+    "subtitle": "Vi erbjuder ett brett utbud av körkortsutbildningar anpassade efter dina behov.",
+    "viewMore": "Visa mer",
+    "all": "Alla kurser",
+    "popular": "Populärast",
+    "from": "Från",
+    "duration": "Tidsåtgång",
+    "readMore": "Läs mer om kursen",
+    "moreFeatures": "fler fördelar",
+    "viewAll": "Se alla våra utbildningspaket"
+  },
+  "reviews": {
+    "title": "Vad våra elever säger",
+    "subtitle": "Lyssna på vad våra tidigare elever har att säga om sin upplevelse med Allis Trafikskola.",
+    "stats": "Vi har hjälpt över 1000 elever att ta körkort med 92% godkända på första försöket.",
+    "filters": {
+      "courseType": "Kurstyp:",
+      "rating": "Filtrera efter betyg:",
+      "allCourses": "Alla kurser",
+      "allRatings": "Alla betyg"
+    },
+    "showing": "Visar {{visible}} av {{total}} recensioner",
+    "loadMore": "Visa fler recensioner",
+    "noneFound": "Inga recensioner matchar dina filter. Prova att ändra filtreringen.",
+    "form": {
+      "title": "Dela din upplevelse",
+      "subtitle": "Hur var din upplevelse med Allis Trafikskola? Din feedback hjälper andra elever att hitta rätt trafikskola.",
+      "fields": {
+        "name": "Namn",
+        "email": "E-post",
+        "age": "Ålder",
+        "courseType": "Kurstyp",
+        "selectCourse": "Välj kurstyp",
+        "rating": "Betyg",
+        "ratingRequired": "Välj ett betyg för att fortsätta",
+        "review": "Din recension",
+        "reviewPlaceholder": "Berätta om din upplevelse med Allis Trafikskola...",
+        "consent": "Jag godkänner att min recension visas offentligt på Allis Trafikskolas hemsida",
+        "submit": "Skicka recension",
+        "submitting": "Skickar..."
+      },
+      "success": {
+        "title": "Tack för din recension!",
+        "message": "Din recension har skickats in och kommer att visas på vår hemsida efter granskning."
+      }
+    },
+    "cta": {
+      "title": "Redo att börja din resa mot körkortet?",
+      "subtitle": "Kontakta oss idag för att boka din första körlektion eller för att få mer information om våra kurser.",
+      "button": "Kontakta oss nu"
+    }
+  },
+  "contact": {
+    "title": "Kontakta oss",
+    "subtitle": "Har du frågor eller vill boka en lektion? Kontakta oss via formuläret nedan eller direkt på telefon.",
+    "form": {
+      "name": "Ditt namn",
+      "email": "Din e-post",
+      "phone": "Ditt telefonnummer",
+      "message": "Ditt meddelande",
+      "submit": "Skicka meddelande"
+    }
+  },
+  "footer": {
+    "address": "Adress",
+    "contact": "Kontakt",
+    "hours": "Öppettider",
+    "links": "Länkar",
+    "copyright": "© {{year}} Allis Trafikskola. Alla rättigheter förbehållna."
+  },
+  "booking": {
+    "title": "Boka körlektion",
+    "subtitle": "Välj datum, tid och kurstyp för din körlektion.",
+    "date": "Datum",
+    "time": "Tid",
+    "courseType": "Kurstyp",
+    "name": "Ditt namn",
+    "email": "Din e-post",
+    "phone": "Ditt telefonnummer",
+    "notes": "Anteckningar",
+    "notesPlaceholder": "Något särskilt vi behöver veta?",
+    "book": "Boka nu",
+    "success": "Din bokning har bekräftats. Vi skickar en bekräftelse till din e-post."
+  },
+  "interactiveTools": {
+    "title": "Interaktiva Verktyg",
+    "subtitle": "Testa dina kunskaper och förbered dig för körkortet med våra interaktiva verktyg.",
+    "quiz": {
+      "title": "Trafikquiz",
+      "subtitle": "Testa dina kunskaper om svenska trafikregler med vårt interaktiva quiz.",
+      "questionCounter": "Fråga {{current}} av {{total}}",
+      "selectOption": "Välj ett alternativ",
+      "submit": "Svara",
+      "next": "Nästa fråga",
+      "correct": "Rätt svar!",
+      "incorrect": "Fel svar",
+      "explanation": "Förklaring",
+      "result": {
+        "title": "Ditt resultat",
+        "score": "Du fick {{correct}} rätt av {{total}} frågor",
+        "excellent": "Utmärkt! Du är redo för teoriprov!",
+        "good": "Bra jobbat! Fortsätt öva för att bli ännu bättre.",
+        "needsPractice": "Du behöver öva mer på trafikreglerna.",
+        "tryAgain": "Försök igen",
+        "reviewAnswers": "Granska dina svar"
+      },
+      "categories": {
+        "all": "Alla kategorier",
+        "signs": "Vägmärken",
+        "rules": "Trafikregler",
+        "situations": "Trafiksituationer",
+        "safety": "Trafiksäkerhet",
+        "environment": "Miljö & Fordon"
+      }
+    }
+  },
+  "blog": {
+    "title": "Tips & Trafiknyheter",
+    "subtitle": "Håll dig uppdaterad med de senaste körtipsen, ändringarna i trafikregler och lokala nyheter som påverkar förare i Malmöområdet.",
+    "readMore": "Läs mer",
+    "backToAll": "Tillbaka till alla artiklar",
+    "publishedOn": "Publicerad {{date}}",
+    "by": "av",
+    "categories": {
+      "all": "Alla kategorier",
+      "safety": "Säkerhet",
+      "maintenance": "Underhåll",
+      "rules": "Trafikregler",
+      "local": "Lokala nyheter",
+      "seasonal": "Säsongstips",
+      "eco": "Miljövänlig körning"
+    },
+    "relatedArticles": "Relaterade artiklar",
+    "shareArticle": "Dela artikel",
+    "featuredPost": "Utvalda artiklar",
+    "allPosts": "Alla artiklar",
+    "noPostsFound": "Inga artiklar hittades med den valda kategorin",
+    "showAllPosts": "Visa alla artiklar"
+  },
+  "routes": {
+    "title": "Övningsrutter i Malmö",
+    "subtitle": "Våra noggrant utvalda rutter för olika kunskapsnivåer hjälper dig att utveckla dina körkunskaper i verkliga trafiksituationer runt Malmö.",
+    "allRoutes": "Alla rutter",
+    "beginner": "Nybörjare",
+    "intermediate": "Mellannivå",
+    "advanced": "Avancerad",
+    "routeFeatures": "Utmärkande egenskaper",
+    "routePoints": "Ruttpunkter att observera",
+    "backToRoutes": "Tillbaka till alla rutter",
+    "showDetails": "Visa detaljer",
+    "allLevels": "Alla nivåer",
+    "noRoutesFound": "Inga rutter hittades med det valda filtret",
+    "showAllRoutes": "Visa alla rutter",
+    "viewDetails": "Visa detaljer",
+    "trafficIntensity": {
+      "low": "Låg trafik",
+      "medium": "Medel trafik",
+      "high": "Hög trafik"
+    },
+    "instructorAdvice": {
+      "title": "Körlärartips",
+      "description": "Tips från våra erfarna körlärare som hjälper dig att få ut mest av dina övningskörningar.",
+      "tips": {
+        "routeSelection": "Välj alltid rutter som matchar din erfarenhetsnivå. Börja med enklare vägar och öka svårighetsgraden gradvis.",
+        "preparation": "Förbered dig mentalt innan varje körning genom att visualisera rutten och potentiella utmaningar.",
+        "progression": "Fokusera på konstant förbättring snarare än perfektion. Varje körning är ett lärtillfälle."
+      },
+      "bookLesson": "Boka lektion",
+      "imageAlt": "Körlärare visar vägen på karta"
+    }
+  },
+  "successStories": {
+    "title": "Framgångshistorier",
+    "subtitle": "Varje elev har sin egen unika resa till körkortet. Här delar några av våra elever sina historier om hur de övervann sina specifika utmaningar med hjälp av Allis Trafikskola.",
+    "ourStudents": "Våra elevers berättelser",
+    "yearsOld": "år",
+    "challenge": "Utmaning",
+    "solution": "Lösning",
+    "passedOn": "Tog körkort",
+    "attempts": "Antal försök",
+    "yourSuccessStory": {
+      "title": "Din framgångshistoria börjar här",
+      "description": "Oavsett din nuvarande kunskapsnivå eller tidigare erfarenheter, är vi dedikerade till att hjälpa dig nå ditt mål att bli en säker och självsäker förare.",
+      "point1": "Personanpassad undervisning baserad på dina behov",
+      "point2": "Flexibla lektionstider som passar ditt schema",
+      "point3": "Erfarna körlärare som verkligen bryr sig om din utveckling",
+      "contactUs": "Kontakta oss idag",
+      "imageAlt": "Glad elev som visar upp sitt körkort"
+    }
+  },
+  "quiz": {
+    "title": "Trafikquiz",
+    "description": "Testa dina kunskaper om svenska trafikregler med vårt interaktiva quiz. Ett perfekt sätt att förbereda dig inför teoriprovet!",
+    "questionProgress": "Fråga {{current}} av {{total}}",
+    "score": "Poäng",
+    "explanation": "Förklaring",
+    "submitAnswer": "Svara",
+    "nextQuestion": "Nästa fråga",
+    "finishQuiz": "Avsluta quiz",
+    "intro": {
+      "title": "Välkommen till trafikquizet!",
+      "description": "Testa dina kunskaper om svenska trafikregler. Välj antal frågor och kategori nedan för att börja.",
+      "settings": "Quiz-inställningar",
+      "questionCount": "Antal frågor",
+      "category": "Kategori",
+      "startButton": "Starta Quiz"
+    },
+    "categories": {
+      "all": "Alla kategorier",
+      "signs": "Vägmärken",
+      "rules": "Trafikregler",
+      "situations": "Trafiksituationer",
+      "safety": "Trafiksäkerhet",
+      "environment": "Miljö & Fordon"
+    },
+    "results": {
+      "title": "Ditt resultat",
+      "yourScore": "Din poäng",
+      "excellent": "Utmärkt! Du är redo för teoriprovet!",
+      "good": "Bra jobbat! Fortsätt öva för att bli ännu bättre.",
+      "needsPractice": "Du behöver öva mer på trafikreglerna.",
+      "summary": "Sammanfattning av dina svar",
+      "correct": "Rätt svar",
+      "incorrect": "Fel svar",
+      "yourAnswer": "Ditt svar",
+      "correctAnswer": "Rätt svar",
+      "tryAgain": "Försök igen",
+      "contactUs": "Kontakta oss för hjälp"
+    }
+  }
+}
