@@ -146,7 +146,7 @@ const HeroSection: React.FC = () => {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
                   quality={imageQuality}
                   style={{ objectFit: "cover", objectPosition: "center right" }}
-                  className="transition-all duration-700 filter hover:brightness-105 rounded-xl shadow-xl"
+                  className="transition-all duration-700 filter hover:brightness-105 rounded-xl shadow-xl instructor-image"
                   placeholder="blur"
                   blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjYwMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjZWFlYWVhIi8+PC9zdmc+"
                   loading={isSlowConnection ? "lazy" : "eager"}
@@ -169,7 +169,7 @@ const HeroSection: React.FC = () => {
             
             {/* Floating review */}
             <motion.div 
-              className="absolute bottom-10 -left-8 bg-white p-5 rounded-lg shadow-elegant-lg max-w-[280px]"
+              className="absolute bottom-10 -left-8 bg-white p-5 rounded-lg shadow-elegant-lg max-w-[280px] hero-floating-review"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7, ease: [0.19, 1, 0.22, 1] }}

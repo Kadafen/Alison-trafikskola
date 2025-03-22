@@ -1,0 +1,18 @@
+/* Adjust Sofia's review card position on mobile */
+@media (max-width: 768px) {
+  .testimonial-card, .sofia-review, .review-box {
+    width: 80%;
+    max-width: 300px;
+    position: relative;
+    top: -20px; /* Move it up slightly */
+    left: 10px; /* Adjust horizontal position */
+  }
+  
+  /* Make testimonial cards smaller on mobile to show more of the background */
+  .testimonial-section .bg-white {
+    max-width: 85%;
+    transform: scale(0.9);
+    margin-left: auto;
+    margin-right: auto;
+  }
+} 

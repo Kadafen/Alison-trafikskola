@@ -128,7 +128,7 @@ const TestimonialsSection: React.FC = () => {
   };
   
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-blue-50 testimonial-section">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
