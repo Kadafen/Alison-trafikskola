@@ -1,0 +1,340 @@
+/* Mobile Optimizations for Alison Trafikskola
+ * This file contains mobile-specific optimizations for the entire website
+ * Only targeting mobile devices (max-width: 768px) - tablet and desktop remain unchanged
+ */
+
+/* Global typography adjustments for mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Improve paragraph readability on mobile */
+  section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  
+  /* Improve button touch targets */
+  button, .btn, [role="button"] {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Improve form control touch targets */
+  input, select, textarea {
+    min-height: 44px;
+    padding: 0.5rem;
+  }
+  
+  /* Improve spacing of elements */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Button & Form controls for touch */
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+    touch-action: manipulation;
+  }
+  
+  /* Header & navigation enhancements */
+  .mobile-header {
+    height: 70px !important;
+  }
+  
+  .site-logo {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+  
+  .mobile-menu-button {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: -8px;
+  }
+  
+  .mobile-menu {
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+  
+  .mobile-nav {
+    padding: 12px 0;
+  }
+  
+  /* Mobile dropdown menu styling */
+  #mobile-resources-menu {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    border-left: 2px solid #dbeafe;
+    margin-left: 0.5rem;
+  }
+  
+  #mobile-resources-menu a {
+    padding-left: 1rem;
+  }
+  
+  #mobile-resources-menu.hidden {
+    display: none;
+  }
+  
+  /* Card containers */
+  .card {
+    padding: 16px !important; 
+  }
+  
+  .card-content {
+    font-size: 0.95rem !important;
+  }
+  
+  .card-spacing {
+    margin-bottom: 16px !important;
+  }
+  
+  /* Hero Section */
+  .hero-section h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Testimonials & reviews */
+  .testimonial-section .testimonial-card {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Quiz optimizations */
+  .quiz-option {
+    padding: 14px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .quiz-navigation {
+    padding: 12px 0 !important;
+  }
+  
+  .quiz-results {
+    padding: 16px !important;
+  }
+  
+  /* Route adjustments for Ovningsrutter page */
+  .route-filters {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .route-card {
+    min-height: auto !important;
+  }
+  
+  .route-map-container {
+    height: 180px !important;
+  }
+  
+  .route-info-pill {
+    margin-bottom: 4px;
+  }
+  
+  /* Grid adjustments */
+  .mobile-grid-1 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Stack order for image+text sections */
+  .reverse-stack {
+    flex-direction: column-reverse !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+    margin-bottom: 24px;
+  }
+  
+  /* Section spacing */
+  .section-spacing {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  
+  /* Accessibility improvements */
+  button:focus, a:focus {
+    outline: 2px solid rgba(59, 130, 246, 0.5) !important;
+  }
+  
+  /* Performance optimizations */
+  .blur-bg-mobile {
+    backdrop-filter: none !important;
+  }
+  
+  /* Disable animations on mobile for performance */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0s !important;
+      transition-duration: 0s !important;
+    }
+  }
+}
+
+/* Dark mode adjustments for mobile */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  .card {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+  
+  .mobile-menu {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+  }
+}
+
+/* Testimonials & Reviews Improvements */
+@media (max-width: 768px) {
+  /* Improve quote appearance */
+  .testimonial-quote svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  /* Optimize star ratings display */
+  .rating-stars {
+    transform: scale(0.9);
+    transform-origin: left center;
+  }
+}
+
+/* Optimizations for TrafikQuiz page */
+@media (max-width: 768px) {
+  /* Make category buttons wrap better */
+  .category-filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* Optimize question layout */
+  .quiz-question {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Improve quiz image container */
+  .quiz-image-container {
+    height: 180px !important;
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Optimizations for Övningsrutter (Driving Routes) */
+@media (max-width: 768px) {
+  /* Filter button layout */
+  .route-filters {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Route card adjustments */
+  .route-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Route map container */
+  .route-map-container {
+    height: 180px !important;
+  }
+  
+  /* Route info pills */
+  .route-info-pill {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0.5rem !important;
+  }
+}
+
+/* Card-based UI improvements for mobile */
+@media (max-width: 768px) {
+  /* Card padding adjustments */
+  .card {
+    padding: 1rem !important;
+  }
+  
+  /* Card grid adjustments */
+  .card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  /* Improved card spacing */
+  .card-spacing > * + * {
+    margin-top: 1rem;
+  }
+  
+  /* Card content adjustments */
+  .card-content {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Fixes for specific component layouts */
+@media (max-width: 768px) {
+  /* Improved grid layouts */
+  .mobile-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  /* Reduced margins between sections */
+  .section-spacing {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Accessiblity improvements for mobile */
+@media (max-width: 768px) {
+  /* Better focus states */
+  .focus-visible:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  /* Simpler backgrounds */
+  .bg-gradient-complex {
+    background: linear-gradient(to bottom, #f3f4f6, #ffffff) !important;
+  }
+  
+  /* Disable some animations on mobile */
+  .animate-on-desktop {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+} 

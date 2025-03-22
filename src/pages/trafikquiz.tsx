@@ -150,13 +150,13 @@ const TrafficQuiz: React.FC = () => {
                   animate="visible"
                   exit="exit"
                   variants={containerVariants}
-                  className="p-6 md:p-8"
+                  className="p-6 md:p-8 card"
                 >
                   <motion.div variants={itemVariants}>
                     <h2 className="text-2xl font-bold mb-6"><T>Välkommen till trafikquizet!</T></h2>
                     <p className="mb-6 text-gray-600"><T>Förbättra dina trafikkunskaper med vårt quiz. Välj antal frågor och kategori för att börja.</T></p>
                     
-                    <div className="mb-8">
+                    <div className="mb-8 card-spacing">
                       <h3 className="font-semibold mb-3"><T>Inställningar</T></h3>
                       
                       <div className="mb-4">
@@ -165,7 +165,7 @@ const TrafficQuiz: React.FC = () => {
                           {[5, 8, 10, 12].map(count => (
                             <button
                               key={count}
-                              className={`px-4 py-2 rounded-full text-sm ${
+                              className={`px-4 py-2 rounded-full text-sm tap-target ${
                                 questionCount === count
                                   ? 'bg-blue-600 text-white'
                                   : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -180,9 +180,9 @@ const TrafficQuiz: React.FC = () => {
                       
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1"><T>Kategori</T></label>
-                        <div className="flex gap-2 flex-wrap">
+                        <div className="flex gap-2 flex-wrap category-filters">
                           <button
-                            className={`px-4 py-2 rounded-full text-sm ${
+                            className={`px-4 py-2 rounded-full text-sm tap-target ${
                               categoryFilter === 'all'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -192,7 +192,7 @@ const TrafficQuiz: React.FC = () => {
                             <T>Alla</T>
                           </button>
                           <button
-                            className={`px-4 py-2 rounded-full text-sm ${
+                            className={`px-4 py-2 rounded-full text-sm tap-target ${
                               categoryFilter === 'signs'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -202,7 +202,7 @@ const TrafficQuiz: React.FC = () => {
                             <T>Vägmärken</T>
                           </button>
                           <button
-                            className={`px-4 py-2 rounded-full text-sm ${
+                            className={`px-4 py-2 rounded-full text-sm tap-target ${
                               categoryFilter === 'rules'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -212,7 +212,7 @@ const TrafficQuiz: React.FC = () => {
                             <T>Trafikregler</T>
                           </button>
                           <button
-                            className={`px-4 py-2 rounded-full text-sm ${
+                            className={`px-4 py-2 rounded-full text-sm tap-target ${
                               categoryFilter === 'situations'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -222,7 +222,7 @@ const TrafficQuiz: React.FC = () => {
                             <T>Trafiksituationer</T>
                           </button>
                           <button
-                            className={`px-4 py-2 rounded-full text-sm ${
+                            className={`px-4 py-2 rounded-full text-sm tap-target ${
                               categoryFilter === 'safety'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -232,7 +232,7 @@ const TrafficQuiz: React.FC = () => {
                             <T>Trafiksäkerhet</T>
                           </button>
                           <button
-                            className={`px-4 py-2 rounded-full text-sm ${
+                            className={`px-4 py-2 rounded-full text-sm tap-target ${
                               categoryFilter === 'environment'
                                 ? 'bg-blue-600 text-white'
                                 : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -248,7 +248,7 @@ const TrafficQuiz: React.FC = () => {
                     <div className="mt-8">
                       <button
                         onClick={startQuiz}
-                        className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                        className="w-full sm:w-auto px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors tap-target"
                       >
                         <T>Starta quiz</T>
                       </button>
@@ -265,7 +265,7 @@ const TrafficQuiz: React.FC = () => {
                   animate="visible"
                   exit="exit"
                   variants={containerVariants}
-                  className="p-6 md:p-8"
+                  className="p-6 md:p-8 card"
                 >
                   <div className="flex justify-between items-center mb-6">
                     <div className="text-sm font-semibold text-gray-500">
@@ -277,10 +277,10 @@ const TrafficQuiz: React.FC = () => {
                   </div>
                   
                   <motion.div variants={itemVariants} className="mb-8">
-                    <h2 className="text-xl font-semibold mb-4">{currentQuestion.question}</h2>
+                    <h2 className="text-xl font-semibold mb-4 quiz-question">{currentQuestion.question}</h2>
                     
                     {currentQuestion.image && (
-                      <div className="mb-4 relative rounded-lg overflow-hidden h-48 md:h-64">
+                      <div className="mb-4 relative rounded-lg overflow-hidden h-48 md:h-64 quiz-image-container">
                         <Image
                           src={currentQuestion.image}
                           alt={currentQuestion.question}
@@ -295,7 +295,7 @@ const TrafficQuiz: React.FC = () => {
                         <button
                           key={index}
                           onClick={() => selectAnswer(index)}
-                          className={`w-full text-left p-3 rounded-lg transition-colors ${
+                          className={`w-full text-left p-3 rounded-lg transition-colors quiz-option tap-target ${
                             selectedAnswer === index
                               ? showAnswer
                                 ? index === currentQuestion.correctAnswer
@@ -326,12 +326,12 @@ const TrafficQuiz: React.FC = () => {
                     </motion.div>
                   )}
                   
-                  <div className="flex justify-end">
+                  <div className="flex justify-end quiz-navigation">
                     {!showAnswer ? (
                       <button
                         onClick={submitAnswer}
                         disabled={selectedAnswer === null}
-                        className={`px-6 py-2 rounded-lg font-medium ${
+                        className={`px-6 py-2 rounded-lg font-medium tap-target ${
                           selectedAnswer === null
                             ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
                             : 'bg-blue-600 text-white hover:bg-blue-700 transition-colors'
@@ -342,7 +342,7 @@ const TrafficQuiz: React.FC = () => {
                     ) : (
                       <button
                         onClick={nextQuestion}
-                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors tap-target"
                       >
                         {currentQuestionIndex < questions.length - 1 
                           ? <T>Nästa fråga</T> 
@@ -362,13 +362,13 @@ const TrafficQuiz: React.FC = () => {
                   animate="visible"
                   exit="exit"
                   variants={containerVariants}
-                  className="p-6 md:p-8"
+                  className="p-6 md:p-8 card"
                 >
                   <motion.div variants={itemVariants}>
                     <h2 className="text-2xl font-bold mb-4"><T>Resultat</T></h2>
                     
                     <div className="mb-6">
-                      <div className="text-center py-6 px-4 bg-gray-50 rounded-lg">
+                      <div className="text-center py-6 px-4 bg-gray-50 rounded-lg quiz-results">
                         <p className="text-lg text-gray-600 mb-2"><T>Din poäng</T></p>
                         <div className="text-4xl font-bold text-blue-600 mb-2">
                           {score} / {questions.length}
@@ -386,11 +386,11 @@ const TrafficQuiz: React.FC = () => {
                     
                     <div className="mb-8">
                       <h3 className="font-semibold mb-4"><T>Sammanfattning</T></h3>
-                      <div className="space-y-4">
+                      <div className="space-y-4 card-spacing">
                         {questions.map((question, index) => (
                           <div
                             key={index}
-                            className="border rounded-lg overflow-hidden bg-white"
+                            className="border rounded-lg overflow-hidden bg-white card"
                           >
                             <div className="p-4">
                               <div className="flex items-start">
@@ -408,7 +408,7 @@ const TrafficQuiz: React.FC = () => {
                                 </div>
                                 <div className="ml-3 flex-1">
                                   <div className="flex items-center justify-between">
-                                    <h4 className="font-medium text-gray-900">
+                                    <h4 className="font-medium text-gray-900 quiz-question">
                                       {index + 1}. {question.question}
                                     </h4>
                                     <p className={`text-sm font-medium px-2 py-0.5 rounded ${
@@ -432,7 +432,7 @@ const TrafficQuiz: React.FC = () => {
                                         <strong><T>Rätt svar</T>:</strong> {question.options[question.correctAnswer]}
                                       </p>
                                     )}
-                                    <p className="text-gray-600 text-sm mt-2">
+                                    <p className="text-gray-600 text-sm mt-2 card-content">
                                       <strong><T>Förklaring</T>:</strong> {question.explanation}
                                     </p>
                                   </div>
@@ -447,13 +447,13 @@ const TrafficQuiz: React.FC = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button
                         onClick={restartQuiz}
-                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+                        className="px-6 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors tap-target"
                       >
                         <T>Försök igen</T>
                       </button>
                       <a 
                         href="/kontakt"
-                        className="px-6 py-2 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors text-center"
+                        className="px-6 py-2 bg-white border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors text-center tap-target"
                       >
                         <T>Kontakta oss</T>
                       </a>

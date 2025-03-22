@@ -97,14 +97,14 @@ const Header: React.FC = () => {
 
   return (
     <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-sm mobile-header"
       initial={{ height: "90px", backgroundColor: "rgba(255, 255, 255, 0.9)" }}
       animate={controls}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex items-center justify-between h-full">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center gap-2">
+            <Link href="/" className="flex items-center gap-2 site-logo">
               <span className="hidden sm:inline-block w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">A</span>
               <span className="text-xl font-display font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent whitespace-nowrap">
                 <T>Alison Trafikskola</T>
@@ -194,7 +194,7 @@ const Header: React.FC = () => {
           </div>
           
           <motion.button 
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-elegant hover:shadow-elegant-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-full bg-white shadow-elegant hover:shadow-elegant-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 tap-target mobile-menu-button"
             whileTap={{ scale: 0.95 }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Stäng meny" : "Öppna meny"}
@@ -224,14 +224,14 @@ const Header: React.FC = () => {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div 
-            className="md:hidden bg-white shadow-elegant-lg overflow-hidden"
+            className="md:hidden bg-white shadow-elegant-lg overflow-hidden mobile-menu"
             variants={menuVariants}
             initial="closed"
             animate="open"
             exit="closed"
           >
             <div className="container mx-auto px-4 py-5">
-              <nav className={`flex flex-col ${isRTL ? 'space-y-reverse' : ''} space-y-3`}>
+              <nav className={`flex flex-col ${isRTL ? 'space-y-reverse' : ''} space-y-3 mobile-nav`}>
                 <NavLink 
                   href="/"
                   active={activeLink === '/'}
@@ -254,33 +254,60 @@ const Header: React.FC = () => {
                   Kurser
                 </NavLink>
                 
-                {/* Restore mobile menu resources section */}
-                <div className="pl-3 border-l-2 border-blue-100 space-y-3 py-2">
-                  <h3 className="font-medium text-gray-700">Resurser</h3>
-                  <NavLink 
-                    href="/trafikquiz"
-                    active={activeLink === '/trafikquiz'}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="pl-2"
+                {/* Updated mobile menu resources dropdown */}
+                <div className="py-2">
+                  <button 
+                    className={`flex items-center justify-between w-full px-3 py-2 font-medium text-sm transition-colors tap-target ${
+                      ['/trafikquiz', '/ovningsrutter', '/framgangshistorier'].includes(activeLink) 
+                      ? 'text-blue-600' 
+                      : 'text-slate-700'
+                    }`}
+                    onClick={(e) => {
+                      // Toggle a local state for mobile resources menu
+                      const resourcesMenu = document.getElementById('mobile-resources-menu');
+                      const arrowIcon = e.currentTarget.querySelector('svg');
+                      
+                      if (resourcesMenu) {
+                        resourcesMenu.classList.toggle('hidden');
+                        
+                        // Animate the arrow icon
+                        if (arrowIcon) {
+                          arrowIcon.classList.toggle('rotate-180');
+                        }
+                      }
+                    }}
                   >
-                    Trafikquiz
-                  </NavLink>
-                  <NavLink 
-                    href="/ovningsrutter"
-                    active={activeLink === '/ovningsrutter'}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="pl-2"
-                  >
-                    ÖvningsRutter
-                  </NavLink>
-                  <NavLink 
-                    href="/framgangshistorier"
-                    active={activeLink === '/framgangshistorier'}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="pl-2"
-                  >
-                    FramGårShistorier
-                  </NavLink>
+                    <span>Resurser</span>
+                    <svg className="w-4 h-4 ml-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  
+                  <div id="mobile-resources-menu" className={`pl-4 mt-1 space-y-2 ${
+                    ['/trafikquiz', '/ovningsrutter', '/framgangshistorier'].includes(activeLink) ? '' : 'hidden'
+                  }`}>
+                    <NavLink 
+                      href="/trafikquiz"
+                      active={activeLink === '/trafikquiz'}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Trafikquiz
+                    </NavLink>
+                    <NavLink 
+                      href="/ovningsrutter"
+                      active={activeLink === '/ovningsrutter'}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      ÖvningsRutter
+                    </NavLink>
+                    <NavLink 
+                      href="/framgangshistorier"
+                      active={activeLink === '/framgangshistorier'}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      FramGångshistorier
+                    </NavLink>
+                  </div>
                 </div>
                 
                 <NavLink 
@@ -309,7 +336,7 @@ const Header: React.FC = () => {
               <div className="mt-6 flex flex-col space-y-4">
                 <Link 
                   href="/booking"
-                  className="w-full bg-blue-600 text-white rounded-md py-2 px-4 text-center font-medium hover:bg-blue-700 transition-colors"
+                  className="w-full bg-blue-600 text-white rounded-md py-2 px-4 text-center font-medium hover:bg-blue-700 transition-colors tap-target"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Boka lektion
