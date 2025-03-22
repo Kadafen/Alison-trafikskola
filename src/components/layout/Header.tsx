@@ -180,6 +180,7 @@ const Header: React.FC = () => {
           </nav>
           
           <div className="hidden md:flex items-center space-x-3">
+            <LanguageSwitcher />
             <Button 
               href="/booking" 
               variant="primary" 
@@ -334,6 +335,7 @@ const Header: React.FC = () => {
               </nav>
               
               <div className="mt-6 flex flex-col space-y-4">
+                <LanguageSwitcher />
                 <Link 
                   href="/booking"
                   className="w-full bg-blue-600 text-white rounded-md py-2 px-4 text-center font-medium hover:bg-blue-700 transition-colors tap-target"

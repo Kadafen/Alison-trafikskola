@@ -55,6 +55,79 @@
   }
 }
 
+/* Google Translate Customization */
+/* Hide Google Translate banner and fix the top offset */
+.goog-te-banner-frame,
+.skiptranslate,
+#goog-gt-tt, 
+.goog-te-balloon-frame,
+div#goog-gt-,
+.goog-tooltip,
+.goog-tooltip:hover,
+.goog-text-highlight {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Reset body positioning that Google Translate tries to change */
+body {
+  top: 0 !important;
+  position: static !important;
+  min-height: 100% !important;
+  overflow-y: visible !important;
+}
+
+/* Fix the document when translated */
+.translated-rtl body {
+  text-align: right;
+}
+
+/* Hide Google Translate UI elements but keep functionality */
+.goog-te-gadget {
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  font-size: 0 !important;
+}
+
+/* Only show attribution text */
+.goog-te-gadget .goog-te-combo + span {
+  display: inline-block !important;
+  font-size: 10px !important;
+  color: #666 !important;
+  position: fixed !important;
+  bottom: 5px !important;
+  right: 5px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  padding: 2px 5px !important;
+  border-radius: 3px !important;
+  z-index: 9999 !important;
+}
+
+/* Hide select element */
+#google_translate_element,
+#google_translate_element select {
+  display: none !important;
+}
+
+/* Fix font rendering issues after translation */
+body.translated-text {
+  font-family: inherit !important;
+}
+
+/* Restore normal appearance when translated */
+.goog-text-highlight {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Additional override to ensure no shifting */
+html[style], body[style] {
+  top: 0 !important;
+  position: static !important;
+}
+
 /* Custom animations and effects */
 @keyframes float {
   0% {

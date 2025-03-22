@@ -3,7 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/courses": "pages/courses.js",
-  "/reviews": "pages/reviews.js",
-  "/trafikquiz": "pages/trafikquiz.js"
+  "/trafikquiz": "pages/trafikquiz.js",
+  "/reviews": "pages/reviews.js"
 }
